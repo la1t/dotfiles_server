@@ -1,0 +1,32 @@
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+
+" включаем управление плагинами через Vundle
+Plugin 'VundleVim/Vundle.vim'
+
+" подсветка nginx синтаксиса
+" https://github.com/chr4/nginx.vim
+Plugin 'chr4/nginx.vim'
+
+call vundle#end()
+filetype plugin indent on
+
+" количество пробелов, которыми символ табуляции отображается в тексте 
+set tabstop=4
+" количество пробелов, которыми символ табуляции отображается при добавлении
+" командами `>>` и `<<`
+set shiftwidth=4
+" в режиме вставки заменяет символ табуляции на соотвествующее количество
+" пробелов
+set expandtab
+" нажатие Tab в начале строки приведет к добавлению отступа, ширина которого
+" соответствует shiftwidth. Нажатие на Backspace удалит отступ, а не только
+" один символ
+set smarttab
+" копирует отступы с текущей строки при добавлении новой, автоматически
+" выставляет отступы в `нужных` местах
+set smartindent
